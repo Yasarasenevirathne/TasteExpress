@@ -3,7 +3,7 @@ import './FoodDisplay.css'
 import { StoreContext } from '../../context/StoreContext'
 import FoodItem from '../FoodItem/FoodItem'
 
-const FoodDispaly = ({category}) => {
+const FoodDisplay = ({category}) => {
 
 
   const {food_list} = useContext(StoreContext)
@@ -24,4 +24,4 @@ const FoodDispaly = ({category}) => {
   )
 }
 
-export default FoodDispaly
+export default FoodDisplay
