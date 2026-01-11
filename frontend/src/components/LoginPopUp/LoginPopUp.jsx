@@ -25,8 +25,8 @@ const [currState,setCurrState] = useState("Login")
                 <p>By continuing, I agree tothe terms of use & privacy policy. </p>
             </div>
             {currState==="Login"
-            ?<p>create a new accout? <span onClick={()=>setCurrState("Sign Up")} >Click Heree....</span></p>
-            :<p>Already have an account? <span onClick={()=>setCurrState("Login")} >login Here....</span></p>
+            ?<p>create a new accout? <span onClick={()=>setCurrState("Sign Up")} >Click Here</span></p>
+            :<p>Already have an account? <span onClick={()=>setCurrState("Login")} >login Here</span></p>
             }
             
             
