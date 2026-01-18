@@ -1,10 +1,12 @@
 import React, {  useState } from 'react'
 import './Add.css'
 import { assets } from '../../assets/assets'
+import axios from "axios"
 
 
 const Add = () => {
 
+ const url = "http://localhost:4000";   
 
 const [image,setImage] = useState(false);
 
@@ -23,7 +25,15 @@ const onChangeHandler = (event) => {
 
 
 const onSubmitHandler = async (event) =>{
-    
+    event.preventDefault();
+    const formData = formData();
+    formData.append("name",data.name)
+    formData.append("description",data.description)
+    formData.append("price",Number(data.price))
+    formData.append("category",data.category)
+    formData.append("image",image)
+    const response = await axios.post(`${url}/api/food/add`,formData);
+    if
 }
 
   return (
